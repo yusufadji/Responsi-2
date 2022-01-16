@@ -1,7 +1,9 @@
-[![GitHub release](https://img.shields.io/badge/Download-APK-green)](https://github.com/DarrenRegan/Final-Year-Project/releases/latest/download/EcommereceApp.apk)
-[![GitHub release](https://img.shields.io/badge/Download-Dissertation-green)](https://github.com/DarrenRegan/Final-Year-Project/raw/master/Final_Year_Dissertation.pdf)
+[![GitHub release](https://img.shields.io/badge/Download-APK-green)](https://github.com/yusufadji/Responsi-2/releases/download/v1.0-responsi2/ECommerce-v1.0.apk)
 
-# Final-Year-Project
+# Responsi 2
+Aplikasi ini dibuat dengan menggunakan referensi dari repository milik [Darren Regan](https://github.com/DarrenRegan/Final-Year-Project) semata-mata untuk keperluan akademisi dan mempelajari bagaimana cara layouting serta penerapan Firebase Realtime Database dan Firebase Storage dengan baik dan benar.
+
+## Final-Year-Project
 E-commerce application made with Kotlin in Android Studio
 
 Goal of this project is to learn Native android development through the use of Android Studio, Kotlin/Java and the use of Google services such as Firebase, Google Pay etc.
@@ -42,11 +44,11 @@ Testing Devices used
 If you are testing this application on your device and experiencing any crashes here are the User and Admin Details used for testing the application.
 
 ```
-Admin UserID: 0831767232
-Admin Password: admin
+Admin UserID: 08987654321
+Admin Password: 123
 
-User UserID: 888
-User Password: 177
+User UserID: 08123456789
+User Password: 123
 ```
 ## Screencast
 
