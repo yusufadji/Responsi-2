@@ -5,4 +5,21 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!--Padding-->
+    <dimen name="pad_sm">8dp</dimen>
+    <dimen name="pad_md">16dp</dimen>
+    <dimen name="pad_lg">24dp</dimen>
+    <dimen name="pad_xl">32dp</dimen>
+    <dimen name="pad_xxl">64dp</dimen>
+
+    <!--Edit Text-->
+    <dimen name="et_height">48dp</dimen>
+    <dimen name="qty_add">32dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="text_sm">8sp</dimen>
+    <dimen name="text_md">16sp</dimen>
+    <dimen name="text_lg">24sp</dimen>
+    <dimen name="text_xl">32sp</dimen>
+    <dimen name="text_xxl">64sp</dimen>
 </resources>

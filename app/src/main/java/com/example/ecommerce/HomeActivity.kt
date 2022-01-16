@@ -32,12 +32,15 @@ import com.google.firebase.storage.StorageTask
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import io.paperdb.Paper
+import java.text.NumberFormat
+import java.util.*
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var productsRef:DatabaseReference
     private lateinit var recyclerView:RecyclerView
+    private lateinit var profileImageView:CircleImageView
     lateinit var layoutManager:RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,7 +75,7 @@ class HomeActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         var headerView = navView.getHeaderView(0)
         var userNameTextView:TextView = headerView.findViewById(R.id.user_profile_name)
-        var profileImageView:CircleImageView = headerView.findViewById(R.id.user_profile_image)
+        profileImageView = headerView.findViewById(R.id.user_profile_image)
 
         userNameTextView.text = Prevalent.currentOnlineUser.getName()
         Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile_img).into(profileImageView)
@@ -138,7 +141,7 @@ class HomeActivity : AppCompatActivity() {
             override fun onBindViewHolder(holder: ProductView, position: Int, model: Products) {
                 holder.txtProdName.setText(model.getPname())
                 holder.txtProdDesc.setText(model.getDescription())
-                holder.txtProdPrice.setText("Price: " + "€" + model.getPrice())       //"Price: ${price}$"
+                holder.txtProdPrice.setText(rupiah(model.getPrice().toDouble()))
                 Picasso.get().load(model.getImage()).into(holder.txtImageView)
             }
 
@@ -151,7 +154,16 @@ class HomeActivity : AppCompatActivity() {
         adapter.startListening()
     }//onStart
 
-} //HomeActivity
+}
+
+private fun rupiah(number: Double): String {
+    val localeID = Locale("in", "ID")
+    val numberFormat = NumberFormat.getCurrencyInstance(localeID)
+    numberFormat.maximumFractionDigits = 0
+    return numberFormat.format(number)
+}
+
+//HomeActivity
 
 /*        navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {

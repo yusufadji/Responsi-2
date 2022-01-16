@@ -24,10 +24,15 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/cartimg" />
+        android:foreground="@drawable/ic_baseline_shopping_cart_24"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@color/colorPrimary"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

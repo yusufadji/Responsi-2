@@ -7,52 +7,69 @@
     android:layout_marginTop="20dp"
     android:layout_marginStart="15dp"
     android:layout_marginEnd="15dp"
-    app:cardElevation="15dp">
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/product_card_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Product Name"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            />
+
         <ImageView
             android:id="@+id/product_card_img"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_below="@+id/product_card_name"
             android:scaleType="centerCrop"
-            android:layout_marginTop="2dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/pad_md"
+            android:paddingEnd="@dimen/pad_md"
+            android:layout_marginTop="@dimen/pad_md"
+            android:text="Product Name"
+            android:textAlignment="textStart"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_md"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_card_img" />
 
         <TextView
             android:id="@+id/product_card_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/product_card_name"
+            android:paddingStart="@dimen/pad_md"
+            android:paddingEnd="@dimen/pad_md"
+            android:layout_marginTop="@dimen/pad_md"
             android:text="Product Price"
-            android:textSize="18dp"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_below="@+id/product_card_img"
-            />
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/text_sub"
+            android:textSize="@dimen/text_md"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_card_name" />
 
         <TextView
             android:id="@+id/product_card_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/product_card_price"
+            android:paddingStart="@dimen/pad_md"
+            android:paddingEnd="@dimen/pad_md"
             android:text="Product Desc"
-            android:textSize="18dp"
-            android:layout_marginTop="2dp"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:layout_below="@+id/product_card_price"
-            />
-    </RelativeLayout>
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_card_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

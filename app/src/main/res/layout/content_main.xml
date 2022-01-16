@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/samplebkr"
+    android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="232dp"
-        android:text="Search around and Buy!"
+        android:layout_marginTop="302dp"
+        android:text="Cari dan belanja sekarang!"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="22sp"
@@ -40,10 +40,10 @@
 
     <ImageView
         android:id='@+id/app_logo'
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="132dp"
-        android:src="@drawable/gmitlogo"
+        android:src="@drawable/uty"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -60,7 +60,7 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/buttons"
         android:padding="20dp"
-        android:text="Already have an Account? Login"
+        android:text="Sudah punya akun? Ayo login"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18dp"
@@ -79,10 +79,9 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/input_design"
         android:padding="20dp"
-        android:text="Join Now"
+        android:text="Gabung sekarang"
         android:textAllCaps="false"
-
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
